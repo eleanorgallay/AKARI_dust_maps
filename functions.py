@@ -63,7 +63,7 @@ def median_filter(map_in, nside_super, fwhm_smooth=None, mask=None, theshold=0.)
 
 
 
-# Here comes a function to take in an AKARI and IRAS map and compute a difference map (AKARI - scaled IRAS)
+# Function to take in an AKARI and IRAS map and compute a difference map (AKARI - scaled IRAS)
 
 
 def diff_map(akari_data, iras_data, ps_data, dmap_filename, ma_filename, path, smooth_nside):
@@ -141,7 +141,7 @@ def diff_map(akari_data, iras_data, ps_data, dmap_filename, ma_filename, path, s
 
 
 
-# My function to find outliers in data that has already been masked for negative pixels and point sources
+# Function to find outliers in data that has already been masked for negative pixels and point sources
 
 def findoutliers(diffmap, filename, path, super_nside=16, nsigma=3, threshold=3):
     """
@@ -321,7 +321,7 @@ def maskoutliers(data, outliers, nsideout, fwhmin, fwhmout, filename, path):
 
 
 
-# My function to fill in outliers with scaled IRAS data in superpixels of a given nside
+# Function to fill in outliers with scaled IRAS data in superpixels of a given nside
 
 def fill(akari_data, smooth_akari_data, iras_data, fwhmin, fwhmout, filename, path, super_nside=16):
     """
